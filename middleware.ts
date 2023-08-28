@@ -33,10 +33,9 @@ export function middleware(request: NextRequest) {
     if (!request.cookies.get("token") && !request.cookies.get("user"))
       return NextResponse.redirect(new URL("/login", request.nextUrl.origin));
   }
-
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/", "/transfer", "/history"],
+  matcher: ["/"],
 };
