@@ -53,7 +53,7 @@ const login = () => {
     }
   };
   return (
-    <>
+    <div className="bg-neutral-700">
       <div className="container mx-auto flex items-center justify-center min-h-screen">
         <div className="bg-gray-200 rounded-xl w-[1080px] h-[400px] mb-64 flex">
           <div className="flex-col w-1/2">
@@ -185,7 +185,7 @@ const login = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
