@@ -7,7 +7,7 @@ import { createRouter } from "next-connect";
 
 const router = createRouter<NextApiRequest, NextApiResponse>();
 
-router.post(async (req, res) => {
+router.get(async (req, res) => {
   await db.connect();
   const newUser = new User({
     username: "testuser",
