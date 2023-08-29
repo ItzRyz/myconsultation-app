@@ -17,7 +17,7 @@ export async function getServerSideProps(ctx: any) {
   return { props: {} };
 }
 
-const login = () => {
+const Login = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [field, setField] = useState<any>({});
 
@@ -189,4 +189,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
