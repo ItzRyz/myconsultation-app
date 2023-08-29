@@ -28,9 +28,7 @@ const Login = () => {
     });
   };
 
-  useEffect(() => {
-    console.log(field);
-  }, [field]);
+  useEffect(() => {}, [field]);
 
   const handleToggle = () => {
     const newValue = !isChecked;
@@ -44,7 +42,6 @@ const Login = () => {
       const { data } = await axios.post("/api/v1/users/login", {
         ...field,
       });
-      console.log(data);
       nookies.set(null, "token", data.token);
       nookies.set(null, "user", data);
       router.push("/");

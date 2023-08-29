@@ -1,8 +1,16 @@
 import React from "react";
 import { HiLogout } from "react-icons/hi";
 import { MdOutlineNotificationsActive } from "react-icons/md";
+import nookies from "nookies";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
+  const logoutClickHandler = (e: any) => {
+    nookies.destroy(null, "token");
+    nookies.destroy(null, "user");
+    router.push("/login");
+  };
   return (
     <nav className="bg-neutral-700 w-full">
       <div className="container mx-auto">
@@ -31,6 +39,7 @@ const Navbar = () => {
             </button>
             <button
               type="button"
+              onClick={logoutClickHandler}
               className="relative rounded-md bg-neutral-300 p-1 ms-2 text-neutral-900 hover:bg-neutral-600"
             >
               <HiLogout className="h-8 w-8" />
